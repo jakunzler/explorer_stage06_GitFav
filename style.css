@@ -61,21 +61,10 @@ header h1 {
   gap: 8px;
 }
 
-.search div {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.search div img {
-  background-color: white;
-  border-radius: 50%;
-}
-
 .search input {
   color: var(--text-color);
   width: 30vw;
-  height: 3.2rem;
+  height: 5vh;
   background: #06181C;
   border-radius: 5px;  
 }
@@ -85,15 +74,26 @@ header h1 {
   border-radius: 5px;
 
   width: 10vw;
-  height: 3.2rem;
+  height: 5vh;
   border: none;
-  padding: 0 1rem;
 
   cursor: pointer;
 }
 
 .search button:hover {
   filter: brightness(1.1)
+}
+
+.search div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.search div img {
+  background-color: white;
+  border-radius: 50%;
 }
 
 table {
@@ -120,15 +120,19 @@ table th {
 }
 
 table th:first-child {
-  border-top-left-radius: 1.5rem;
+  border-top-left-radius: 15px;
 }
 
-table th:last-child{
-  border-top-right-radius: 1.5rem;
+table th:last-child {
+  border-top-right-radius: 15px;
 }
 
-tbody tr td:last-child:last-child {
-  border-bottom-right-radius: 1.5rem;
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 15px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 15px;
 }
 
 table tr:nth-child(even) {
@@ -144,16 +148,14 @@ table td {
   text-align: left;
 }
 
-td.user {
+td.user div {
   display: flex;
   align-items: center;
   gap: 1rem;
-
-  border-radius: 5rem;
 }
 
 
-td.user img {
+td.user div img {
   width: 5rem;
   height: 5rem;
 
@@ -161,11 +163,11 @@ td.user img {
   border-radius: 50%;
 }
 
-td.user a {
+td.user div a {
   text-decoration: none;
 }
 
-td.user a p {
+td.user div a p {
   font-weight: bold;
 }
 
@@ -176,4 +178,15 @@ td .remove {
   color: red;
 
   cursor: pointer;
+}
+
+.empty_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 50vh;
+
+  gap: 4rem;
 }
